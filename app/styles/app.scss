@@ -1,9 +1,9 @@
 @import "base/variable";
 
-// foundation
-@import 'base/foundation-settings';
-@import "foundation";
-@include foundation-everything;
+// foundation // I dont want use this
+// @import 'base/foundation-settings';
+// @import "foundation";
+// @include foundation-everything;
 
 
 // Components
@@ -13,7 +13,7 @@
 @import "components/page-title";
 
 // Fixed temp foundation style:
-// .large-4{
-//     width: 600px;
-//     margin: 0px auto;
-// }
+.large-4{
+    width: 600px;
+    margin: 0px auto;
+}
