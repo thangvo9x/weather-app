@@ -48,34 +48,3 @@ npm install sass-loader node-sass --save-dev
 
 SCSS # SACC:
 With {} and without {} (?)
-
-
---------
-jsbin.com => test
-
-https://github.com/mjackson/expect
-
-
-Configure TEST with Webpack React ---------------
-
-npm test => Test all the controls
-
-INSTALL:
-npm install karma@0.13.22 karma-chrome-launcher@0.2.2 karma-mocha@0.2.2 karma-mocha-reporter@2.0.0 karma-sourcemap-loader@0.3.7 karma-webpack@1.7.0 mocha@2.4.5 expect@1.14.0 --save-dev
-
-+ karma-mocha@0.2.2
-+ karma-sourcemap-loader@0.3.7
-+ karma-mocha-reporter@2.0.0
-+ expect@1.14.0
-+ karma-webpack@1.7.0
-+ karma@0.13.22
-+ mocha@2.4.5
-+ karma-chrome-launcher@0.2.2
-added 132 packages in 10.889s
-
-https://karma-runner.github.io/2.0/index.html
-
-npm install react-addons-test-utils@0.14.6 --save-dev
-
-L-73: The test does not run: npm test 
-=> fixed: if() and it()

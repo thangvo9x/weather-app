@@ -2,15 +2,13 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('Main');
-var Timer = require('Timer');
-var Countdown = require('Countdown');
+var Weather = require('Weather');
+var About = require('About');
+var Examples = require('Examples');
 
-// Load foundation
-// require('style!css!foundation-sites/dist/foundation.min.css');
-// Use this=> dont need to build scss again
-require('style!css!foundation-sites/dist/css/foundation.min.css')
+// Load foundation 
+require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
-
 
 // Manual css
 require('style!css!sass!applicationStyles');
@@ -19,9 +17,9 @@ console.log('Ready');
 
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path='/' component={Main}>
-            <IndexRoute  component={Timer}>Timer</IndexRoute>
-            <Route path='countdown' component={Countdown}>Countdown</Route>
-        </Route>
-    </Router>, document.getElementById('app')
-);
+    <Route path='/' component={Main}>
+        <Route path="about" component={About}/>
+        <Route path="examples" component={Examples}/>
+        <IndexRoute component={Weather}/>
+    </Route>
+</Router>, document.getElementById('app'));

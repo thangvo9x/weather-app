@@ -1,19 +1,12 @@
-@import "base/variable";
+$title-color:#555;
+$space-large: 2.5rem;
 
-// foundation // I dont want use this
-// @import 'base/foundation-settings';
-// @import "foundation";
-// @include foundation-everything;
+.page-title{
+    color: $title-color;
+    margin-top: $space-large;
+    margin-bottom: $space-large;
+}
 
-
-// Components
-@import "components/navigation";
-@import "components/clock";
-@import "components/control";
-@import "components/page-title";
-
-// Fixed temp foundation style:
-.large-4{
-    width: 600px;
-    margin: 0px auto;
+input[type="search"]{
+    box-shadow: none;
 }

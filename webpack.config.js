@@ -1,10 +1,9 @@
 var webpack = require('webpack');
-var path = require('path');
 
 module.exports = {
     entry: [
         'script!jquery/dist/jquery.min.js',
-        'script!foundation-sites/dist/js/foundation.min.js',
+        'script!foundation-sites/dist/foundation.min.js',
         './app/app.jsx'
     ],
     externals:{
@@ -25,13 +24,16 @@ module.exports = {
         root: __dirname, 
         alias: {
             Main: 'app/components/Main.jsx',
-            Timer: 'app/components/Timer.jsx',
-            Countdown: 'app/components/Countdown.jsx',
-            CountdownForm: 'app/components/CountdownForm.jsx',
-            Clock: 'app/components/Clock.jsx',
-            Controls: 'app/components/Controls.jsx',
-            Navigation: 'app/components/Navigation.jsx',
-            applicationStyles: 'app/styles/app.scss'
+            Nav: 'app/components/Nav.jsx',
+            Weather: 'app/components/Weather.jsx',
+            WeatherForm: 'app/components/WeatherForm.jsx',
+            WeatherMessage: 'app/components/WeatherMessage.jsx',
+            WeatherMessage: 'app/components/WeatherMessage.jsx',
+            ErrorModal: 'app/components/ErrorModal.jsx',
+            openWeatherMap: 'app/api/openWeatherMap.jsx',
+            About: 'app/components/About.jsx',
+            applicationStyles: 'app/styles/app.scss',
+            Examples: 'app/components/Examples.jsx'
         },
         extensions: ['', '.js', '.jsx']
     },
@@ -45,11 +47,6 @@ module.exports = {
                 test:/\.jsx?$/,
                 exclude:/(node_modules|bower_components)/
             }
-        ]
-    },
-    sassLoader:{
-        includePaths: [
-            path.resolve(__dirname, './node_modules/foundation-sites/scss')
         ]
     },
     devtool: 'cheap-module-eval-source-map'
